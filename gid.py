@@ -273,19 +273,19 @@ def charcater_info_place(page=1):
         if character_number==13:
             tartalia_skill_convert.place(x=800, y=370)
     else:
-        character_passive1_image.place
-        character_passive1_text.place
-        character_passive2_image.place
-        character_passive2_text.place
-        character_passive3_image.place
-        character_passive3_text.place
-        character_star1.place
-        character_star2.place
-        character_star3.place
-        character_star4.place
-        character_star5.place
-        character_star6.place
-        character_star.place
+        character_passive1_image.place(x=240, y=130)
+        character_passive1_text.place(x=330, y=130)
+        character_passive2_image.place(x=240, y=210)
+        character_passive2_text.place(x=330,y=210)
+        character_passive3_image.place(x=0, y=290)
+        character_passive3_text.place(x=90, y=300)
+        character_star1.place(x=4, y=370)
+        character_star2.place(x=170, y=370)
+        character_star3.place(x=336, y=370)
+        character_star4.place(x=502, y=370)
+        character_star5.place(x=668, y=370)
+        character_star6.place(x=834, y=370)
+        character_star.place(x=0, y=430)
 
 def character_info_forget():
     global character_number
@@ -354,9 +354,6 @@ def babara_info(page=1):
             character_skill_text.configure(text="자신에게 노래의 고리를 부여하고 주위의 적에게 물 원소 피해를 가합니다.\n노래의 고리는 캐릭터를 전환해도 유지됩니다.\n노래의 고리를 가진 동안 바바라의 공격(강공격은 4배)이 명중 시 파티원 전원을 치유합니다\n노래의 고리가 있는 동안 주기적으로 현제 캐릭터를 치유하며 현제캐릭터와 주위의 적에게 습기를 부여합니다", fg="dodgerblue3", font=("Comic Sans MS", 12), bg="light steel blue")
             character_ult_image.configure(image=babara_ult_image)
             character_ult_text.configure(fg="dodgerblue3", font=("Comic Sans MS", 26), bg="light steel blue", text="주위 아군 및 자신의 파티원 전원이 회복됩니다")
-            info_weapon_level(10)
-            info_skill_level(10)
-            info_ult_level(10)
         else:
             working(1)
     else:
@@ -380,9 +377,6 @@ def hangchu_info(page=1):
             character_skill_text.configure(text="주위의 적에게 물 원소 공격(타격2회)를 가하고 자신을 습기상태로 만든 뒤 3개의 우렴검을 부여합니다.\n우렴검은 캐릭터를 전환해도 유지되며 부여량은 1별이상이면 4개가 됩니다\n우렴검 가진 동안 경직저항이 증가하고, 받는 피해량이 감소하지만 피격마다 1개씩 감소합니다", fg="dodgerblue3", font=("Comic Sans MS", 12), bg="light steel blue")
             character_ult_image.configure(image=hangchu_ult_image)
             character_ult_text.configure(fg="dodgerblue3", font=("Comic Sans MS", 16), bg="light steel blue", text="우렴검의 수가 최대치로 유지되게 되며 일반공격 시행마다 홍검세가 물원소 피해를 같이 가합니다.\n이 효과들은 캐릭터를 전환해도 유지됩니다")
-            info_weapon_level(character_number)
-            info_skill_level(character_number)
-            info_ult_level(character_number)
         else:
             working()
     else:
@@ -406,9 +400,6 @@ def mona_info(page=1):
             character_skill_text.configure(text="길게 눌러 허영을 소환하며 빠르게 후퇴합니다. 허영은 주위 적을 도발하며 지속적으로 물 원소 피해를 가합니다\n지속시간이 종료되면 파열되며 주위 적에게 물 원소 피해를 가합니다\n대시 대신 몸을 숨키고 빠른 속도를 이동할 수 있으며 몸을 드러낼 때 주위 적에게 물 원소 피해를 가합니다", fg="dodgerblue3", font=("Comic Sans MS", 12), bg="light steel blue")
             character_ult_image.configure(image=mona_ult_image)
             character_ult_text.configure(fg="dodgerblue3", font=("Comic Sans MS", 16), bg="light steel blue", text="주위적을 포영,성이, 습기 상태로 만듭니다. 포영 상태의 적 공격 시 추가 물 원소 피해를 가합니다\n 성이상태의 적은 받는 피해가 증가하고 약한 적은 구속당해 아무것도 못하게 합니다")
-            info_weapon_level(character_number)
-            info_skill_level(character_number)
-            info_ult_level(character_number)
         else:
             working()
     else:
@@ -473,9 +464,6 @@ def lisa_info(page=1): #틀만 옮긴 상태임
             character_skill_text.configure(text="자신에게 노래의 고리를 부여하고 주위의 적에게 물 원소 피해를 가합니다.\n노래의 고리는 캐릭터를 전환해도 유지됩니다.\n노래의 고리를 가진 동안 바바라의 공격(강공격은 4배)이 명중 시 파티원 전원을 치유합니다\n노래의 고리가 있는 동안 주기적으로 현제 캐릭터를 치유하며 현제캐릭터와 주위의 적에게 습기를 부여합니다", fg="dodgerblue3", font=("Comic Sans MS", 12), bg="light steel blue")
             character_ult_image.configure(image=babara_ult_image)
             character_ult_text.configure(fg="dodgerblue3", font=("Comic Sans MS", 26), bg="light steel blue", text="주위 아군 및 자신의 파티원 전원이 회복됩니다")
-            info_weapon_level(10)
-            info_skill_level(10)
-            info_ult_level(10)
         else:
             working()#여긴 이제 패시브들 그리고 운명의 자리를 채울 공간
     else:
@@ -831,13 +819,13 @@ character_passive1_text=Label(window, text="패시브 특성1호", fg="dodgerblu
 character_passive2_image=Label(window, image=tartalia_passive2_image)
 character_passive2_text=Label(window, text="패시브 특성2호", fg="dodgerblue3", font=("Comic Sans MS",11), bg="light steel blue")
 character_passive3_image=Label(window, image=tartalia_passive3_image)
-character_passive3_text=Label(window, text="패시브 특성3호", fg="dodgerblue3", font=("Comic Sans MS",11), bg="light steel blue")
-character_star1=Button(window, text=1, command=star1, width=6)
-character_star2=Button(window, text=2, command=star2, width=6)
-character_star3=Button(window, text=3, command=star3, width=6)
-character_star4=Button(window, text=4, command=star4, width=6)
-character_star5=Button(window, text=5, command=star5, width=6)
-character_star6=Button(window, text=6, command=star6, width=6)
+character_passive3_text=Label(window, text="패시브 특성3호", fg="dodgerblue3", font=("Comic Sans MS",18), bg="light steel blue")
+character_star1=Button(window, text=1, command=star1, width=19, height=2)
+character_star2=Button(window, text=2, command=star2, width=19, height=2)
+character_star3=Button(window, text=3, command=star3, width=19, height=2)
+character_star4=Button(window, text=4, command=star4, width=19, height=2)
+character_star5=Button(window, text=5, command=star5, width=19, height=2)
+character_star6=Button(window, text=6, command=star6, width=19, height=2)
 character_star=Label(window, bg="light steel blue", fg="dodgerblue3", font=("Comic Sans MS",12), text="운명의 자리")
 
 
