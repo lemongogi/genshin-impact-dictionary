@@ -1,5 +1,5 @@
 import builtins
-from os import O_WRONLY
+import os
 from tkinter import *
 from tkinter import messagebox
 from tkinter.simpledialog import *
@@ -7,7 +7,6 @@ from tkinter.filedialog import *
 import random
 import infomultiply
 import destinystar
-
 
 
 infostat=int(0) #캐릭터 정보랑 캐릭터 스텟이랑 버튼을 공유하기 때문에 어느 버튼을 눌러서 들어왔는지 구분하기 위해
@@ -247,8 +246,9 @@ def rock_forget():
     lumine_rock_dis.place_forget()
 
 #기존의 탭 입장이 아니라 캐릭터까지 들어가는 것과 캐릭터에서 나오는 것
-def charcater_info_place(page):
+def charcater_info_place(page=1):
     global character_number
+    character_info_forget()
     character_image.place(x=0, y=50)
     character_name.place(x=260,y=50)
     character_eletype.place(x=530, y=50)
@@ -272,7 +272,19 @@ def charcater_info_place(page):
         if character_number==13:
             tartalia_skill_convert.place(x=800, y=370)
     else:
-        working()
+        character_passive1_image.place
+        character_passive1_text.place
+        character_passive2_image.place
+        character_passive2_text.place
+        character_passive3_image.place
+        character_passive3_text.place
+        character_star1.place
+        character_star2.place
+        character_star3.place
+        character_star4.place
+        character_star5.place
+        character_star6.place
+        character_star.place
 
 def character_info_forget():
     global character_number
@@ -296,6 +308,19 @@ def character_info_forget():
     character_ult_multiply.place_forget()
     character_ult_multiply_frame.place_forget()
     tartalia_skill_convert.place_forget()
+    character_passive1_image.place_forget()
+    character_passive1_text.place_forget()
+    character_passive2_image.place_forget()
+    character_passive2_text.place_forget()
+    character_passive3_image.place_forget()
+    character_passive3_text.place_forget()
+    character_star1.place_forget()
+    character_star2.place_forget()
+    character_star3.place_forget()
+    character_star4.place_forget()
+    character_star5.place_forget()
+    character_star6.place_forget()
+    character_star.place_forget()
 
 #레벨 전환기  이거 미완성임. 숫자는 올라가는데 보이는 수치를 조정하지 않으며 place하지 않음
 
@@ -538,21 +563,46 @@ def pageprevious(current_mode):
         sinyam_dis.place(x=250,y=310)
         hudo_dis.place(x=500,y=310)
         yawnbi_dis.place(x=750,y=310)
+    elif current_mode=="info_babara":
+        babara_info(1)
+    elif current_mode=="info_hangchu":
+        hangchu_info(1)
+    elif current_mode=="info_mona":
+        mona_info(1)
+    elif current_mode=="info_childe":
+        tartalia_info(1)
+    elif current_mode=="info_lisa":
+        lisa_info(1)
 
 def star1():
-    f
+    working()
 
-        
+def star2():
+    working()
+
+def star3():
+    working()
+
+def star4():
+    working()
+
+def star5():
+    working()
+
+def star6():
+    working()
+
+
 
 #메인코드
 window=Tk()
 tartalia_mode="bow"
 tartalia_entry=int(0)#다른 모든 캐릭터처럼 들어갈 때
 weapon_level_global=skill_level_global=ult_level_global=int(1)
-window.iconbitmap(default='barbara.ico')
+window.iconbitmap('C:/과일맛 고기/2021/레몬맛고기/[05]개인적인 프로젝트/gid/genshin-impact-dictionary/barbara.ico')
 window.configure(bg="light steel blue")
 window.title("Genshin Impact Supporter")
-window.geometry("1000x600+450+200") 
+window.geometry("1000x630+450+200") 
 window.resizable(width=FALSE, height=FALSE)
 version="alpha 6.13"
 version_dis=Label(window, text=version, fg="white", bg="light steel blue")
@@ -578,13 +628,13 @@ page_next=Button(window, text=">", command=page_next_fun, width=3)
 page_previous=Button(window, text="<", command=page_previous_fun, width=3)
 
 #속성 이미지 생성
-fire=PhotoImage(file="gid/elemental/fire2.png")
-water=PhotoImage(file="gid/elemental/water.png")
-ice=PhotoImage(file="gid/elemental/ice.png")
-lightening=PhotoImage(file="gid/elemental/lightening.png")
-grass=PhotoImage(file="gid/elemental/grass.png")
-wind=PhotoImage(file="gid/elemental/wind.png")
-rock=PhotoImage(file="gid/elemental/rock.png")
+fire=PhotoImage(file="C:/과일맛 고기/2021/레몬맛고기/[05]개인적인 프로젝트/gid/genshin-impact-dictionary/gid/elemental/fire2.png")
+water=PhotoImage(file="C:/과일맛 고기/2021/레몬맛고기/[05]개인적인 프로젝트/gid/genshin-impact-dictionary/gid/elemental/water.png")
+ice=PhotoImage(file="C:/과일맛 고기/2021/레몬맛고기/[05]개인적인 프로젝트/gid/genshin-impact-dictionary/gid/elemental/ice.png")
+lightening=PhotoImage(file="C:/과일맛 고기/2021/레몬맛고기/[05]개인적인 프로젝트/gid/genshin-impact-dictionary/gid/elemental/lightening.png")
+grass=PhotoImage(file="C:/과일맛 고기/2021/레몬맛고기/[05]개인적인 프로젝트/gid/genshin-impact-dictionary/gid/elemental/grass.png")
+wind=PhotoImage(file="C:/과일맛 고기/2021/레몬맛고기/[05]개인적인 프로젝트/gid/genshin-impact-dictionary/gid/elemental/wind.png")
+rock=PhotoImage(file="C:/과일맛 고기/2021/레몬맛고기/[05]개인적인 프로젝트/gid/genshin-impact-dictionary/gid/elemental/rock.png")
 
 #속성 버튼
 fire_dis=Button(window, image=fire, command=fire_place)
@@ -611,15 +661,15 @@ page_previous.place(x=930, y=0)
 ender.pack(side=BOTTOM, fill=X)
 
 #불 캐릭터 이미지 생성
-amber=PhotoImage(file="gid/character/amber.png")
-hyanglng=PhotoImage(file="gid/character/xiangling.png")
-benet=PhotoImage(file="gid/character/bennett.png")
-dieluk=PhotoImage(file="gid/character/diluc.png")
-kle=PhotoImage(file="gid/character/klee.png")
-sinyam=PhotoImage(file="gid/character/xinyan.png")
-hudo=PhotoImage(file="gid/character/hu tao.png")
-yawnbi=PhotoImage(file="gid/character/yanfei.png")
-yoimiya=PhotoImage(file="gid/character/yoimiya.png")
+amber=PhotoImage(file="C:/과일맛 고기/2021/레몬맛고기/[05]개인적인 프로젝트/gid/genshin-impact-dictionary/gid/character/amber.png")
+hyanglng=PhotoImage(file="C:/과일맛 고기/2021/레몬맛고기/[05]개인적인 프로젝트/gid/genshin-impact-dictionary/gid/character/xiangling.png")
+benet=PhotoImage(file="C:/과일맛 고기/2021/레몬맛고기/[05]개인적인 프로젝트/gid/genshin-impact-dictionary/gid/character/bennett.png")
+dieluk=PhotoImage(file="C:/과일맛 고기/2021/레몬맛고기/[05]개인적인 프로젝트/gid/genshin-impact-dictionary/gid/character/diluc.png")
+kle=PhotoImage(file="C:/과일맛 고기/2021/레몬맛고기/[05]개인적인 프로젝트/gid/genshin-impact-dictionary/gid/character/klee.png")
+sinyam=PhotoImage(file="C:/과일맛 고기/2021/레몬맛고기/[05]개인적인 프로젝트/gid/genshin-impact-dictionary/gid/character/xinyan.png")
+hudo=PhotoImage(file="C:/과일맛 고기/2021/레몬맛고기/[05]개인적인 프로젝트/gid/genshin-impact-dictionary/gid/character/hu tao.png")
+yawnbi=PhotoImage(file="C:/과일맛 고기/2021/레몬맛고기/[05]개인적인 프로젝트/gid/genshin-impact-dictionary/gid/character/yanfei.png")
+yoimiya=PhotoImage(file="C:/과일맛 고기/2021/레몬맛고기/[05]개인적인 프로젝트/gid/genshin-impact-dictionary/gid/character/yoimiya.png")
 
 #불 캐릭터 버튼
 amber_dis=Button(window, image=amber, command=working)
@@ -633,10 +683,10 @@ yawnbi_dis=Button(window, image=yawnbi, command=working)
 yoimiya_dis=Button(window, image=yoimiya, command=working)
 
 #물 캐릭터 이미지 생성
-babara=PhotoImage(file="gid/character/barbara.png")
-hangchu=PhotoImage(file="gid/character/xingqiu.png")
-mona=PhotoImage(file="gid/character/mona.png")
-tartalia=PhotoImage(file="gid/character/childe.png")
+babara=PhotoImage(file="C:/과일맛 고기/2021/레몬맛고기/[05]개인적인 프로젝트/gid/genshin-impact-dictionary/gid/character/barbara.png")
+hangchu=PhotoImage(file="C:/과일맛 고기/2021/레몬맛고기/[05]개인적인 프로젝트/gid/genshin-impact-dictionary/gid/character/xingqiu.png")
+mona=PhotoImage(file="C:/과일맛 고기/2021/레몬맛고기/[05]개인적인 프로젝트/gid/genshin-impact-dictionary/gid/character/mona.png")
+tartalia=PhotoImage(file="C:/과일맛 고기/2021/레몬맛고기/[05]개인적인 프로젝트/gid/genshin-impact-dictionary/gid/character/childe.png")
 
 #물 캐릭터 버튼
 babara_dis=Button(window, image=babara, command=babara_info)
@@ -645,13 +695,13 @@ mona_dis=Button(window, image=mona, command=mona_info)
 tartalia_dis=Button(window, image=tartalia, command=tartalia_info)
 
 #바람 캐릭터 이미지 생성
-suger=PhotoImage(file="gid/character/sucrose.png")
-jean=PhotoImage(file="gid/character/jean.png")
-venti=PhotoImage(file="gid/character/venti.png")
-so=PhotoImage(file="gid/character/xiao.png")
-kazha=PhotoImage(file="gid/character/kazuha.png")
-lumine=PhotoImage(file="gid/character/lumine.png")
-sayu=PhotoImage(file="gid/character/sayu.png")
+suger=PhotoImage(file="C:/과일맛 고기/2021/레몬맛고기/[05]개인적인 프로젝트/gid/genshin-impact-dictionary/gid/character/sucrose.png")
+jean=PhotoImage(file="C:/과일맛 고기/2021/레몬맛고기/[05]개인적인 프로젝트/gid/genshin-impact-dictionary/gid/character/jean.png")
+venti=PhotoImage(file="C:/과일맛 고기/2021/레몬맛고기/[05]개인적인 프로젝트/gid/genshin-impact-dictionary/gid/character/venti.png")
+so=PhotoImage(file="C:/과일맛 고기/2021/레몬맛고기/[05]개인적인 프로젝트/gid/genshin-impact-dictionary/gid/character/xiao.png")
+kazha=PhotoImage(file="C:/과일맛 고기/2021/레몬맛고기/[05]개인적인 프로젝트/gid/genshin-impact-dictionary/gid/character/kazuha.png")
+lumine=PhotoImage(file="C:/과일맛 고기/2021/레몬맛고기/[05]개인적인 프로젝트/gid/genshin-impact-dictionary/gid/character/lumine.png")
+sayu=PhotoImage(file="C:/과일맛 고기/2021/레몬맛고기/[05]개인적인 프로젝트/gid/genshin-impact-dictionary/gid/character/sayu.png")
 
 #바람 캐릭터 버튼
 suger_dis=Button(window, image=suger, command=working)
@@ -663,11 +713,11 @@ lumine_wind_dis=Button(window, image=lumine, command=working)
 sayu_dis=Button(window, image=sayu, command=working)
 
 #번개 캐릭터 이미지
-lisa=PhotoImage(file="gid/character/lisa.png")
-razor=PhotoImage(file="gid/character/razor.png")
-bukdu=PhotoImage(file="gid/character/beidou.png")
-fisl=PhotoImage(file="gid/character/fischl.png")
-gakchuwng=PhotoImage(file="gid/character/keqing.png")
+lisa=PhotoImage(file="C:/과일맛 고기/2021/레몬맛고기/[05]개인적인 프로젝트/gid/genshin-impact-dictionary/gid/character/lisa.png")
+razor=PhotoImage(file="C:/과일맛 고기/2021/레몬맛고기/[05]개인적인 프로젝트/gid/genshin-impact-dictionary/gid/character/razor.png")
+bukdu=PhotoImage(file="C:/과일맛 고기/2021/레몬맛고기/[05]개인적인 프로젝트/gid/genshin-impact-dictionary/gid/character/beidou.png")
+fisl=PhotoImage(file="C:/과일맛 고기/2021/레몬맛고기/[05]개인적인 프로젝트/gid/genshin-impact-dictionary/gid/character/fischl.png")
+gakchuwng=PhotoImage(file="C:/과일맛 고기/2021/레몬맛고기/[05]개인적인 프로젝트/gid/genshin-impact-dictionary/gid/character/keqing.png")
 
 #번개 캐릭터 버튼
 lisa_dis=Button(window, image=lisa, command=lisa_info)
@@ -678,14 +728,14 @@ gakchuwng_dis=Button(window, image=gakchuwng, command=working)
 lumine_lightening_dis=Button(window, image=lumine, command=working)
 
 #얼음 캐릭터 이미지
-keiya=PhotoImage(file="gid/character/kaeya.png")
-jungun=PhotoImage(file="gid/character/chongyun.png")
-chichi=PhotoImage(file="gid/character/qiqi.png")
-diona=PhotoImage(file="gid/character/diona.png")
-gamwoo=PhotoImage(file="gid/character/ganyu.png")
-rosaria=PhotoImage(file="gid/character/rosaria.png")
-uera=PhotoImage(file="gid/character/eula.png")
-ayaka=PhotoImage(file="gid/character/ayaka.png")
+keiya=PhotoImage(file="C:/과일맛 고기/2021/레몬맛고기/[05]개인적인 프로젝트/gid/genshin-impact-dictionary/gid/character/kaeya.png")
+jungun=PhotoImage(file="C:/과일맛 고기/2021/레몬맛고기/[05]개인적인 프로젝트/gid/genshin-impact-dictionary/gid/character/chongyun.png")
+chichi=PhotoImage(file="C:/과일맛 고기/2021/레몬맛고기/[05]개인적인 프로젝트/gid/genshin-impact-dictionary/gid/character/qiqi.png")
+diona=PhotoImage(file="C:/과일맛 고기/2021/레몬맛고기/[05]개인적인 프로젝트/gid/genshin-impact-dictionary/gid/character/diona.png")
+gamwoo=PhotoImage(file="C:/과일맛 고기/2021/레몬맛고기/[05]개인적인 프로젝트/gid/genshin-impact-dictionary/gid/character/ganyu.png")
+rosaria=PhotoImage(file="C:/과일맛 고기/2021/레몬맛고기/[05]개인적인 프로젝트/gid/genshin-impact-dictionary/gid/character/rosaria.png")
+uera=PhotoImage(file="C:/과일맛 고기/2021/레몬맛고기/[05]개인적인 프로젝트/gid/genshin-impact-dictionary/gid/character/eula.png")
+ayaka=PhotoImage(file="C:/과일맛 고기/2021/레몬맛고기/[05]개인적인 프로젝트/gid/genshin-impact-dictionary/gid/character/ayaka.png")
 
 #얼음 캐릭터 버튼
 keiya_dis=Button(window, image=keiya, command=working)
@@ -698,10 +748,10 @@ uera_dis=Button(window, image=uera, command=working)
 ayaka_dis=Button(window, image=ayaka, command=working)
 
 #바위 캐릭터 이미지
-nggwang=PhotoImage(file="gid/character/ningguang.png")
-noel=PhotoImage(file="gid/character/noelle.png")
-zongliya=PhotoImage(file="gid/character/zhongli.png")
-albedo=PhotoImage(file="gid/character/albedo.png")
+nggwang=PhotoImage(file="C:/과일맛 고기/2021/레몬맛고기/[05]개인적인 프로젝트/gid/genshin-impact-dictionary/gid/character/ningguang.png")
+noel=PhotoImage(file="C:/과일맛 고기/2021/레몬맛고기/[05]개인적인 프로젝트/gid/genshin-impact-dictionary/gid/character/noelle.png")
+zongliya=PhotoImage(file="C:/과일맛 고기/2021/레몬맛고기/[05]개인적인 프로젝트/gid/genshin-impact-dictionary/gid/character/zhongli.png")
+albedo=PhotoImage(file="C:/과일맛 고기/2021/레몬맛고기/[05]개인적인 프로젝트/gid/genshin-impact-dictionary/gid/character/albedo.png")
 
 #바위 캐릭터 버튼
 nggwang_dis=Button(window, image=nggwang, command=working)
@@ -716,39 +766,39 @@ skill_level=ult_level=int(1)
 
 #물=dodgerblue3
 #무기 이미지
-orb=PhotoImage(file="gid/skill icon/weapon/orb.png")
-broadsword=PhotoImage(file="gid/skill icon/weapon/broadsword.png")
-bow=PhotoImage(file="gid/skill icon/weapon/bow.png")
+orb=PhotoImage(file="C:/과일맛 고기/2021/레몬맛고기/[05]개인적인 프로젝트/gid/genshin-impact-dictionary/gid/skill icon/weapon/orb.png")
+broadsword=PhotoImage(file="C:/과일맛 고기/2021/레몬맛고기/[05]개인적인 프로젝트/gid/genshin-impact-dictionary/gid/skill icon/weapon/broadsword.png")
+bow=PhotoImage(file="C:/과일맛 고기/2021/레몬맛고기/[05]개인적인 프로젝트/gid/genshin-impact-dictionary/gid/skill icon/weapon/bow.png")
 
 #3번째 특성(요리증가, 재련제료 반환 등등)
-cooking=PhotoImage(file="gid/skill icon/passive3/cook.png")
-ability_ingr_reduce=PhotoImage(file="gid/skill icon/passive3/ability_reduce.png")
-weapon_ingr_reduce=PhotoImage(file="gid/skill icon/passive3/weapon_reduce.png")
+cooking=PhotoImage(file="C:/과일맛 고기/2021/레몬맛고기/[05]개인적인 프로젝트/gid/genshin-impact-dictionary/gid/skill icon/passive3/cook.png")
+ability_ingr_reduce=PhotoImage(file="C:/과일맛 고기/2021/레몬맛고기/[05]개인적인 프로젝트/gid/genshin-impact-dictionary/gid/skill icon/passive3/ability_reduce.png")
+weapon_ingr_reduce=PhotoImage(file="C:/과일맛 고기/2021/레몬맛고기/[05]개인적인 프로젝트/gid/genshin-impact-dictionary/gid/skill icon/passive3/weapon_reduce.png")
 
 #바바라 이미지
-babara_skill_image=PhotoImage(file="gid/skill icon/barbara/skill.png")
-babara_ult_image=PhotoImage(file="gid/skill icon/barbara/ult.png")
-babara_passive1_image=PhotoImage(file="gid/skill icon/barbara/passive1.png")
-babara_passive2_image=PhotoImage(file="gid/skill icon/barbara/passive2.png")
+babara_skill_image=PhotoImage(file="C:/과일맛 고기/2021/레몬맛고기/[05]개인적인 프로젝트/gid/genshin-impact-dictionary/gid/skill icon/barbara/skill.png")
+babara_ult_image=PhotoImage(file="C:/과일맛 고기/2021/레몬맛고기/[05]개인적인 프로젝트/gid/genshin-impact-dictionary/gid/skill icon/barbara/ult.png")
+babara_passive1_image=PhotoImage(file="C:/과일맛 고기/2021/레몬맛고기/[05]개인적인 프로젝트/gid/genshin-impact-dictionary/gid/skill icon/barbara/passive1.png")
+babara_passive2_image=PhotoImage(file="C:/과일맛 고기/2021/레몬맛고기/[05]개인적인 프로젝트/gid/genshin-impact-dictionary/gid/skill icon/barbara/passive2.png")
 
 #행추 이미지
-hangchu_skill_image=PhotoImage(file="gid/skill icon/xingqiu/skill.png")
-hangchu_ult_image=PhotoImage(file="gid/skill icon/xingqiu/ult.png")
-hangchu_passive1_image=PhotoImage(file="gid/skill icon/xingqiu/passive1.png")
-hangchu_passive2_image=PhotoImage(file="gid/skill icon/xingqiu/passive2.png")
+hangchu_skill_image=PhotoImage(file="C:/과일맛 고기/2021/레몬맛고기/[05]개인적인 프로젝트/gid/genshin-impact-dictionary/gid/skill icon/xingqiu/skill.png")
+hangchu_ult_image=PhotoImage(file="C:/과일맛 고기/2021/레몬맛고기/[05]개인적인 프로젝트/gid/genshin-impact-dictionary/gid/skill icon/xingqiu/ult.png")
+hangchu_passive1_image=PhotoImage(file="C:/과일맛 고기/2021/레몬맛고기/[05]개인적인 프로젝트/gid/genshin-impact-dictionary/gid/skill icon/xingqiu/passive1.png")
+hangchu_passive2_image=PhotoImage(file="C:/과일맛 고기/2021/레몬맛고기/[05]개인적인 프로젝트/gid/genshin-impact-dictionary/gid/skill icon/xingqiu/passive2.png")
 
 #모나 이미지
-mona_skill_image=PhotoImage(file="gid/skill icon/mona/skill.png")
-mona_ult_image=PhotoImage(file="gid/skill icon/mona/ult.png")
-mona_passive1_image=PhotoImage(file="gid/skill icon/mona/passive1.png")
-mona_passive2_image=PhotoImage(file="gid/skill icon/mona/passive2.png")
+mona_skill_image=PhotoImage(file="C:/과일맛 고기/2021/레몬맛고기/[05]개인적인 프로젝트/gid/genshin-impact-dictionary/gid/skill icon/mona/skill.png")
+mona_ult_image=PhotoImage(file="C:/과일맛 고기/2021/레몬맛고기/[05]개인적인 프로젝트/gid/genshin-impact-dictionary/gid/skill icon/mona/ult.png")
+mona_passive1_image=PhotoImage(file="C:/과일맛 고기/2021/레몬맛고기/[05]개인적인 프로젝트/gid/genshin-impact-dictionary/gid/skill icon/mona/passive1.png")
+mona_passive2_image=PhotoImage(file="C:/과일맛 고기/2021/레몬맛고기/[05]개인적인 프로젝트/gid/genshin-impact-dictionary/gid/skill icon/mona/passive2.png")
 
 #타르탈리아
-tartalia_skill_image=PhotoImage(file="gid/skill icon/childe/skill.png")
-tartalia_ult_image=PhotoImage(file="gid/skill icon/childe/ult.png")
-tartalia_passive1_image=PhotoImage(file="gid/skill icon/childe/passive1.png")
-tartalia_passive2_image=PhotoImage(file="gid/skill icon/childe/passive2.png")
-tartalia_passive3_image=PhotoImage(file="gid/skill icon/childe/passive3.png")
+tartalia_skill_image=PhotoImage(file="C:/과일맛 고기/2021/레몬맛고기/[05]개인적인 프로젝트/gid/genshin-impact-dictionary/gid/skill icon/childe/skill.png")
+tartalia_ult_image=PhotoImage(file="C:/과일맛 고기/2021/레몬맛고기/[05]개인적인 프로젝트/gid/genshin-impact-dictionary/gid/skill icon/childe/ult.png")
+tartalia_passive1_image=PhotoImage(file="C:/과일맛 고기/2021/레몬맛고기/[05]개인적인 프로젝트/gid/genshin-impact-dictionary/gid/skill icon/childe/passive1.png")
+tartalia_passive2_image=PhotoImage(file="C:/과일맛 고기/2021/레몬맛고기/[05]개인적인 프로젝트/gid/genshin-impact-dictionary/gid/skill icon/childe/passive2.png")
+tartalia_passive3_image=PhotoImage(file="C:/과일맛 고기/2021/레몬맛고기/[05]개인적인 프로젝트/gid/genshin-impact-dictionary/gid/skill icon/childe/passive3.png")
 
 
 character_image=Label(window, image=tartalia)
@@ -775,19 +825,20 @@ character_skill_level=Button(window, text="미설정", command=info_skill_level_
 character_ult_multiply_frame=Label(window, text="궁 테두뤼", bg="light steel blue", fg="dodgerblue3", font=("Comic Sans MS",12))
 character_ult_multiply=Label(window, text="궁 내용", bg="light steel blue", fg="dodgerblue3", font=("Comic Sans MS",12))
 character_ult_level=Button(window, text="미설정", command=info_ult_level_button_ver, width=8, height=2)
+#2페이지
 character_passive1_image=Label(window, image=tartalia_passive1_image)
-character_passive1_text=Label(window, text="", fg="dodgerblue3", font=("Comic Sans MS",11), bg="light steel blue")
+character_passive1_text=Label(window, text="패시브 특성1호", fg="dodgerblue3", font=("Comic Sans MS",11), bg="light steel blue")
 character_passive2_image=Label(window, image=tartalia_passive2_image)
-character_passive2_text=Label(window, text="", fg="dodgerblue3", font=("Comic Sans MS",11), bg="light steel blue")
+character_passive2_text=Label(window, text="패시브 특성2호", fg="dodgerblue3", font=("Comic Sans MS",11), bg="light steel blue")
 character_passive3_image=Label(window, image=tartalia_passive3_image)
-character_passive3_text=Label(window, text="", fg="dodgerblue3", font=("Comic Sans MS",11), bg="light steel blue")
+character_passive3_text=Label(window, text="패시브 특성3호", fg="dodgerblue3", font=("Comic Sans MS",11), bg="light steel blue")
 character_star1=Button(window, text=1, command=star1, width=6)
 character_star2=Button(window, text=2, command=star2, width=6)
 character_star3=Button(window, text=3, command=star3, width=6)
 character_star4=Button(window, text=4, command=star4, width=6)
 character_star5=Button(window, text=5, command=star5, width=6)
 character_star6=Button(window, text=6, command=star6, width=6)
-character_star=Label(window, bg="light steel blue", fg="dodgerblue3", font=("Comic Sans MS",12), text="")
+character_star=Label(window, bg="light steel blue", fg="dodgerblue3", font=("Comic Sans MS",12), text="운명의 자리")
 
 
 #타르탈리아용 버튼
