@@ -12,14 +12,15 @@ import destinystar
 infostat=int(0) #캐릭터 정보랑 캐릭터 스텟이랑 버튼을 공유하기 때문에 어느 버튼을 눌러서 들어왔는지 구분하기 위해
 character_number=int(0) #캐릭터 정보와 캐릭터 스텟에서 어떤 캐릭터를 선택한 상황인지 알기 위하여
 current_mode=str("main")#현제 띄우고 있는 창을 나타냄
-def working():
-    whatto=random.randrange(0,3)
-    if whatto==0:
-        messagebox.showerror("페이몬","이쪽은 다음에 다시 탐색하러 오자")
-    elif whatto==1:
-        messagebox.showerror("종려","이곳이 무엇을 하는 곳인 가에 대해서는 \n아쉽게도 까먹었어")
-    elif whatto==2:
-        messagebox.showerror("타르탈리아","나 타르탈리아는 매 순간 강해지고 있지.\n이깟 공백도 금방 채우겠어")
+def working(purpose=0): #0이면 입장 제한 문구, 1이면 암것도 안 함
+    if purpose==0:
+        whatto=random.randrange(0,3)
+        if whatto==0:
+            messagebox.showerror("페이몬","이쪽은 다음에 다시 탐색하러 오자")
+        elif whatto==1:
+            messagebox.showerror("종려","이곳이 무엇을 하는 곳인 가에 대해서는 \n아쉽게도 까먹었어")
+        elif whatto==2:
+            messagebox.showerror("타르탈리아","나 타르탈리아는 매 순간 강해지고 있지.\n이깟 공백도 금방 채우겠어")
 
 def main_set():#메인화면으로 설정. 메인화면 버튼을 숨기지 않고 탭전환 시 사용
     global infostat, character_number, current_mode
@@ -357,8 +358,7 @@ def babara_info(page=1):
             info_skill_level(10)
             info_ult_level(10)
         else:
-
-            working()#여긴 이제 패시브들 그리고 운명의 자리를 채울 공간
+            working(1)
     else:
         working()
 

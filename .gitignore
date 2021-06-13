@@ -4,6 +4,7 @@
 
 #manual
 *.pyc
+*.txt
 
 ### Images ###
 # JPEG
