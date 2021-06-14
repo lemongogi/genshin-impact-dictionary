@@ -50,8 +50,8 @@ def info_weapon_level2(character_number, weapon_level, multiply, multiply_frame,
             not_written(multiply)
 
     elif character_number==11:  #행추
-        multiply_frame.configure(text="  [1단/2단/3단/4단/5단]  [강공격]    [낙하공격(저공/고공)]", font=("Comic Sans MS", 12))
-        multiply.configure(font=("Comic Sans MS", 11))
+        multiply_frame.configure(text="  [1단/2단/3단/4단/5단]  [강공격]    [낙하공격(저공/고공)]", font=("Comic Sans MS", 12), fg="dodgerblue3")
+        multiply.configure(font=("Comic Sans MS", 11), fg="dodgerblue3")
         if weapon_level==1:
             multiply.configure(text="[46.6% / 47.6% / 28.6+28.6% / 56.0% / 35.9%+35.9%]   [47.3%+56.2%]   [128% / 160%]")#전부 수정
         elif weapon_level==2:
@@ -86,8 +86,8 @@ def info_weapon_level2(character_number, weapon_level, multiply, multiply_frame,
             not_written(multiply)
 
     elif character_number==12: #모나
-        multiply_frame.configure(text="    [1단/2단/3단/4단]  [강공격]    [낙하공격(저공/고공)]", font=("Comic Sans MS", 12))
-        multiply.configure(font=("Comic Sans MS",11))
+        multiply_frame.configure(text="    [1단/2단/3단/4단]  [강공격]    [낙하공격(저공/고공)]", font=("Comic Sans MS", 12), fg="dodgerblue3")
+        multiply.configure(font=("Comic Sans MS",11), fg="dodgerblue3")
         if weapon_level==1:
             multiply.configure(text="[37.6% / 36.0% / 44.8% / 56.2%]   [150%]   [114% / 142%]")
         elif weapon_level==2:
@@ -122,9 +122,9 @@ def info_weapon_level2(character_number, weapon_level, multiply, multiply_frame,
             not_written(multiply)
 
     elif character_number==13: #타르탈리아
-        multiply.configure(font=("Comic Sans MS",10))
+        multiply.configure(font=("Comic Sans MS",10), fg="dodgerblue3")
         if tartalia_mode=="bow":
-            multiply_frame.configure(text="[1단/2단/3단/4단/5단/6단] [조준공격/풀차징] [단류섬] [단류파] [단류지속] [낙하공격(저공/고공)]", font=("Comic Sans MS", 10))
+            multiply_frame.configure(text="[1단/2단/3단/4단/5단/6단] [조준공격/풀차징] [단류섬] [단류파] [단류지속] [낙하공격(저공/고공)]", font=("Comic Sans MS", 10), fg="dodgerblue3")
             if weapon_level==1:
                 multiply.configure(text="[41.3% / 46.3% / 55.4% / 57.0% / 60.9% / 72.8%]   [43.9%/124%] [12.4%] [62%] [10초] [114% / 142%]")
             elif weapon_level==2:
@@ -158,7 +158,7 @@ def info_weapon_level2(character_number, weapon_level, multiply, multiply_frame,
             else :
                 not_written(multiply)
         else:
-                multiply_frame.configure(text="[1단/2단/3단/4단/5단/6단] [강공격] [단류참] [단류지속]", font=("Comic Sans MS", 10))
+                multiply_frame.configure(text="[1단/2단/3단/4단/5단/6단] [강공격] [단류참] [단류지속]", font=("Comic Sans MS", 10), fg="dodgerblue3")
                 if skill_level==1:
                     multiply.configure(text="[38.9% / 41.6% / 56.3% / 59.9% / 55.3% / 35.4%+37.7%]   [60.2%+72.0%] [12.4%] [10초]")
                 elif skill_level==2:
@@ -192,10 +192,48 @@ def info_weapon_level2(character_number, weapon_level, multiply, multiply_frame,
                 else :
                     not_written(multiply)
 
+    elif character_number==19: #리사
+        multiply_frame.configure(text="    [1단/2단/3단/4단]  [강공격]    [낙하공격(저공/고공)]", font=("Comic Sans MS", 12), fg="slateblue2")
+        multiply.configure(font=("Comic Sans MS",11), fg="slateblue2")
+        if weapon_level==1:
+            multiply.configure(text="[39.6% / 35.9% / 42.8% / 55.0%]   [177%]   [114% / 142%]")
+        elif weapon_level==2:
+            multiply.configure(text="[42.6% / 38.6% / 46.0% / 59.1%]  [190%]  [123%/153%]")
+        elif weapon_level==3:
+            multiply.configure(text="[45.5% / 41.3% / 49.2% / 63.2%]   [204%]   [132% / 165%]") 
+        elif weapon_level==4:
+            multiply.configure(text="[49.5% / 44.9% / 53.5% / 68.7%]   [221%]   [145% / 182%]")
+        elif weapon_level==5:
+            multiply.configure(text="[52.5% / 47.6% / 56.7% / 72.8%]   [235%]   [155% / 193%]")
+        elif weapon_level==6:
+            multiply.configure(text="[55.4% / 50.3% / 59.9% / 76.9%]   [248%]   [165% / 206%]")
+        elif weapon_level==7:
+            multiply.configure(text="[59.4% / 53.9% / 64.2% / 82.4%]   [266%]   [180% / 224%]")
+        elif weapon_level==8:
+            multiply.configure(text="[63.4% / 57.5% / 68.5% / 87.9%]   [283%]   [194% / 243%]")
+        elif weapon_level==9:
+            multiply.configure(text="[67.3% / 61.1% / 72.8% / 93.4%]   [301%]   [209% / 261%]")
+        elif weapon_level==10:
+            multiply.configure(text="[71.3% / 64.7% / 77.0% / 98.9%]   [319%]   [225% / 281%]")
+        elif weapon_level==11:
+            multiply.configure(text="[75.4% / 68.4% / 81.5% / 105%]   [337%]   [240% / 300%]")
+        elif weapon_level==12:
+            multiply.configure(text="[80.8% / 73.3% / 87.3% / 112%]  [361%]  [256% / 320%]")
+        elif weapon_level==13:
+            multiply.configure(text="[86.2% / 78.2% / 93.1% / 120%]  [385%]  [272% / 340%]")
+        elif weapon_level==14:
+            multiply.configure(text="[91.6% / 83.1% / 99.0% / 127%]  [410%]  [288% / 360%]")
+        elif weapon_level==15:
+            multiply.configure(text="[96.9% / 87.9% / 105% / 135%]  [434%]  [304% / 380%]")
+        else :
+            not_written(multiply)
+
+
 def info_skill_level2(character_number, skill_level, multiply, multiply_frame):
     if character_number==10: #바바라
         reposition(80, 392, 417, multiply, multiply_frame)
-        multiply_frame.configure(text="[치유량(공격 시 회복/자동회복)] [피해량] [지속시간] [쿨타임]")
+        multiply_frame.configure(text="[치유량(공격 시 회복/자동회복)] [피해량] [지속시간] [쿨타임]", fg="dodgerblue3")
+        multiply.configure(fg="dodgerblue3")
         if skill_level==1:
             multiply.configure(text="[0.0075 x hp + 72/0.04 x hp + 385]   [58.4%]   [15초] [32초]")
         elif skill_level==2:
@@ -231,7 +269,8 @@ def info_skill_level2(character_number, skill_level, multiply, multiply_frame):
 
     elif character_number==11: #행추
         reposition(80, 380, 405, multiply, multiply_frame)
-        multiply_frame.configure(text="[스킬피해량] [피해감소량] [지속시간] [쿨타임]")
+        multiply_frame.configure(text="[스킬피해량] [피해감소량] [지속시간] [쿨타임]", fg="dodgerblue3")
+        multiply.configure(fg="dodgerblue3")
         multiply.configure(font=("Comic Sans MS",14))
         if skill_level==1:
             multiply.configure(text="[168%+191%]   [20%]   [15초] [21초]")
@@ -268,7 +307,8 @@ def info_skill_level2(character_number, skill_level, multiply, multiply_frame):
     
     elif character_number==12: #모나
         reposition(80, 380, 405, multiply, multiply_frame)
-        multiply_frame.configure(text="[지속피해량] [파열피해량] [지속시간] [쿨타임]")
+        multiply_frame.configure(text="[지속피해량] [파열피해량] [지속시간] [쿨타임]", fg="dodgerblue3")
+        multiply.configure(fg="dodgerblue3")
         multiply.configure(font=("Comic Sans MS",14))
         if skill_level==1:
             multiply.configure(text="[32.0%]   [133%]   [5초] [21초]")
@@ -306,7 +346,8 @@ def info_skill_level2(character_number, skill_level, multiply, multiply_frame):
     elif character_number==13: #타르탈리아
         reposition(80, 380, 405, multiply, multiply_frame)
         multiply_frame.configure(text="[피해량]")
-        multiply_frame.configure(font=("Comic Sans MS",13))
+        multiply_frame.configure(font=("Comic Sans MS",13), fg="dodgerblue3")
+        multiply.configure(fg="dodgerblue3")
         multiply.configure(font=("Comic Sans MS",13))
         if skill_level==1:
             multiply.configure(text="[72%]")
@@ -341,9 +382,49 @@ def info_skill_level2(character_number, skill_level, multiply, multiply_frame):
         else :
             not_written(multiply)
 
+    elif character_number==19: #리사
+        reposition(80, 380, 405, multiply, multiply_frame)
+        multiply_frame.configure(text="[단순시전 시 피해량] [홀드 시 피해량(0/1/2/3중첩)] [쿨타임(단순시전)] [쿨타임(홀드)]", fg="slateblue2")
+        multiply.configure(fg="slateblue2")
+        multiply.configure(font=("Comic Sans MS",14))
+        if skill_level==1:
+            multiply.configure(text="[80%]   [320% / 368% / 424% / 487%]   [1초] [16초]")
+        elif skill_level==2:
+            multiply.configure(text="[86%]   [344% / 396% / 456% / 524%]   [1초] [16초]")
+        elif skill_level==3:
+            multiply.configure(text="[92%]   [368% / 423% / 488% / 560%]   [1초] [16초]") 
+        elif skill_level==4:
+            multiply.configure(text="[100%]   [400% / 460% / 530% / 609%]   [1초] [16초]")
+        elif skill_level==5:
+            multiply.configure(text="[106%]   [424% / 488% / 562% / 646%]   [1초] [16초]")
+        elif skill_level==6:
+            multiply.configure(text="[112%]   [448% / 515% / 594% / 682%]   [1초] [16초]")
+        elif skill_level==7:
+            multiply.configure(text="[120%]   [480% / 552% / 636% / 731%]   [1초] [16초]")
+        elif skill_level==8:
+            multiply.configure(text="[128%]   [512% / 589% / 678% / 780%]   [1초] [16초]")
+        elif skill_level==9:
+            multiply.configure(text="[136%]   [544% / 626% / 721% / 828%]   [1초] [16초]")
+        elif skill_level==10:
+            multiply.configure(text="[144%]   [576% / 662% / 763% / 877%]   [1초] [16초]")
+        elif skill_level==11:
+            multiply.configure(text="[152%]   [608% / 699% / 806% / 926%]   [1초] [16초]")
+        elif skill_level==12:
+            multiply.configure(text="[160%]   [640% / 736% / 848% / 974%]   [1초] [16초]")
+        elif skill_level==13:
+            multiply.configure(text="[170%]   [680% / 782% / 901% / 1035%]   [1초] [16초]")
+        elif skill_level==14:
+            multiply.configure(text="[180%]   [720% / 828% / 954% / 1096%]   [1초] [16초]")
+        elif skill_level==15:
+            multiply.configure(text="[190%]   [760% / 874% / 1007% / 1157%]   [1초] [16초]")
+        else :
+            not_written(multiply)
+
+
 def info_ult_level2(character_number, skill_level, multiply, multiply_frame, tartalia_mode=""):
     if character_number==10:  #바바라
-        multiply_frame.configure(text="\t[치유량] \t\t[쿨타임]")
+        multiply_frame.configure(text="\t[치유량] \t\t[쿨타임]", fg="dodgerblue3")
+        multiply.configure(fg="dodgerblue3")
         if skill_level==1:
             multiply.configure(text="[0.0176 x hp + 1694] \t\t[20초]")
         elif skill_level==2:
@@ -378,7 +459,8 @@ def info_ult_level2(character_number, skill_level, multiply, multiply_frame, tar
             not_written(multiply)
 
     elif character_number==11:  #행추
-        multiply_frame.configure(text="[피해량] [지속시간] [쿨타임]")
+        multiply_frame.configure(text="[피해량] [지속시간] [쿨타임]", fg="dodgerblue3")
+        multiply.configure(fg="dodgerblue3")
         if skill_level==1:
             multiply.configure(text="[54.3%] [15초] [20초]")
         elif skill_level==2:
@@ -413,7 +495,8 @@ def info_ult_level2(character_number, skill_level, multiply, multiply_frame, tar
             not_written(multiply)
     
     elif character_number==12:  #모나
-        multiply_frame.configure(text="[피해량] [피해증폭량] [포영지속시간] [성이지속시간] [쿨타임]")
+        multiply_frame.configure(text="[피해량] [피해증폭량] [포영지속시간] [성이지속시간] [쿨타임]",fg="dodgerblue3")
+        multiply.configure(fg="dodgerblue3")
         if skill_level==1:
             multiply.configure(text="[442%] [42%] [8초] [4초] [15초]")
         elif skill_level==2:
@@ -449,7 +532,8 @@ def info_ult_level2(character_number, skill_level, multiply, multiply_frame, tar
         
     elif character_number==13:  #타르탈리아
         if tartalia_mode=="bow":
-            multiply_frame.configure(text="[피해량] [쿨타임]")
+            multiply_frame.configure(text="[피해량] [쿨타임]",fg="dodgerblue3")
+            multiply(fg="dodgerblue3")
             if skill_level==1:
                 multiply.configure(text="[378%] [15초]")
             elif skill_level==2:
@@ -483,7 +567,8 @@ def info_ult_level2(character_number, skill_level, multiply, multiply_frame, tar
             else :
                 not_written(multiply)
         else:
-            multiply_frame.configure(text="[피해량] [단류 폭] [쿨타임]")
+            multiply_frame.configure(text="[피해량] [단류 폭] [쿨타임]",fg="dodgerblue3")
+            multiply.configure(fg="dodgerblue3")
             if skill_level==1:
                 multiply.configure(text="[464%] [120%] [15초]")
             elif skill_level==2:
@@ -516,3 +601,40 @@ def info_ult_level2(character_number, skill_level, multiply, multiply_frame, tar
                 multiply.configure(text="[1102%] [285%] [15초]")
             else :
                 not_written(multiply)
+
+    elif character_number==19:  #리사
+        multiply_frame.configure(text="[회당 피해량(=넉백공격의 피해량)] [지속시간] [쿨타임]", fg="slateblue2")
+        multiply.configure(fg="slateblue2")
+        if skill_level==1:
+            multiply.configure(text="[36.6%] [15초] [20초]")
+        elif skill_level==2:
+            multiply.configure(text="[39.3%] [15초] [20초]")
+        elif skill_level==3:
+            multiply.configure(text="[42%] [15초] [20초]") 
+        elif skill_level==4:
+            multiply.configure(text="[45.7%] [15초] [20초]")
+        elif skill_level==5:
+            multiply.configure(text="[48.4%] [15초] [20초]")
+        elif skill_level==6:
+            multiply.configure(text="[51.2%] [15초] [20초]")
+        elif skill_level==7:
+            multiply.configure(text="[54.8%] [15초] [20초]")
+        elif skill_level==8:
+            multiply.configure(text="[58.5%] [15초] [20초]")
+        elif skill_level==9:
+            multiply.configure(text="[62.2%] [15초] [20초]")
+        elif skill_level==10:
+            multiply.configure(text="[65.8%] [15초] [20초]")
+        elif skill_level==11:
+            multiply.configure(text="[69.5%] [15초] [20초]")
+        elif skill_level==12:
+            multiply.configure(text="[73.1%] [15초] [20초]")
+        elif skill_level==13:
+            multiply.configure(text="[77.7%] [15초] [20초]")
+        elif skill_level==14:
+            multiply.configure(text="[82.3%] [15초] [20초]")
+        elif skill_level==15:
+            multiply.configure(text="[86.8%] [15초] [20초]")
+        else :
+            not_written(multiply)
+
