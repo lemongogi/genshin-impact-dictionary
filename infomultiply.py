@@ -195,7 +195,7 @@ def info_weapon_level2(character_number, weapon_level, multiply, multiply_frame,
 
 def info_skill_level2(character_number, skill_level, multiply, multiply_frame):
     if character_number==10: #바바라
-        reposition(80, 390, 415, multiply, multiply_frame)
+        reposition(80, 392, 417, multiply, multiply_frame)
         multiply_frame.configure(text="[치유량(공격 시 회복/자동회복)] [피해량] [지속시간] [쿨타임]")
         if skill_level==1:
             multiply.configure(text="[0.0075 x hp + 72/0.04 x hp + 385]   [58.4%]   [15초] [32초]")

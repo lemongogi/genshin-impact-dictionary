@@ -12,6 +12,7 @@ import destinystar
 infostat=int(0) #캐릭터 정보랑 캐릭터 스텟이랑 버튼을 공유하기 때문에 어느 버튼을 눌러서 들어왔는지 구분하기 위해
 character_number=int(0) #캐릭터 정보와 캐릭터 스텟에서 어떤 캐릭터를 선택한 상황인지 알기 위하여
 current_mode=str("main")#현제 띄우고 있는 창을 나타냄
+indicate_char_info1=int(0) #1이 되면 경고를 받지 않겠다는 것
 def working(purpose=0): #0이면 입장 제한 문구, 1이면 암것도 안 함
     if purpose==0:
         whatto=random.randrange(0,3)
@@ -248,7 +249,12 @@ def rock_forget():
 
 #기존의 탭 입장이 아니라 캐릭터까지 들어가는 것과 캐릭터에서 나오는 것
 def charcater_info_place(page=1):
-    global character_number
+    global character_number, indicate_char_info1
+    if indicate_char_info1!=1:
+        messagebox.showinfo("사용 전 알려드립니다","스킬의 레벨을 설정하기 전까진 \n스킬의 계수를 표시하는 텍스트가 \n다른 텍스트를 가릴 수 있습니다")
+        messagebox.showinfo("사용 전 알려드립니다","이미지를 클릭 시 해당 특성의 이름을 표시합니다")
+        char_info1=messagebox.askyesno("다신 보지 않기", "앞선 도움말들을 도우미를 다시 시작하기 전까진 다신 표시하지 말까요?")
+        indicate_char_info1=char_info1
     character_info_forget()
     character_image.place(x=0, y=50)
     character_name.place(x=260,y=50)
@@ -265,8 +271,8 @@ def charcater_info_place(page=1):
         character_weapon_multiply_frame.place(x=330, y=230)
         character_weapon_multiply.place(x=320, y=265)
         character_skill_level.place(x=0, y=370)
-        character_skill_multiply.place(x=80, y=415)
-        character_skill_multiply_frame.place(x=80,y=390)
+        character_skill_multiply.place(x=80, y=405)
+        character_skill_multiply_frame.place(x=80,y=380)
         character_ult_level.place(x=0, y=500)
         character_ult_multiply.place(x=80, y=520)
         character_ult_multiply_frame.place(x=80, y=490)
@@ -334,6 +340,98 @@ def tartalia_info_convert():
         tartalia_mode="bow"
     tartalia_info()
 
+def char_weapon_name(event):
+    if character_number==10:
+        messagebox.showinfo("일반무기 이름","물의 노래")
+    elif character_number==11:
+        messagebox.showinfo("일반무기 이름","고화 검법")
+    elif character_number==12:
+        messagebox.showinfo("일반무기 이름","인과 간파")
+    elif character_number==13:
+        if tartalia_mode=="bow":
+            messagebox.showinfo("일반무기 이름","단우")
+        else:
+            messagebox.showinfo("마왕무기 이름","광란")
+    elif character_number==19:
+        messagebox.showinfo("일반무기 이름","손끝의 뇌폭")
+    elif character_number==20:
+        messagebox.showinfo("일반무기 이름","물의 노래")
+
+def char_skill_name(event):
+    if character_number==10:
+        messagebox.showinfo("스킬","공연, 시작♪")
+    elif character_number==11:
+        messagebox.showinfo("스킬","고화검 · 화우농산")
+    elif character_number==12:   
+        messagebox.showinfo("스킬","수중 환원(허영 소환 및 후퇴)\n흐르는 허와 실(이동기)")
+    elif character_number==13:
+        if tartalia_mode=="bow":
+            messagebox.showinfo("스킬","마왕 무장")
+        else:
+            working(1)
+    elif character_number==19:
+        messagebox.showinfo("스킬","창뢰")
+    elif character_number==20:
+        messagebox.showinfo("스킬","물의 노래")
+
+def char_ult_name(event):
+    if character_number==10:
+        messagebox.showinfo("궁극기","빛나는 기적♪")
+    elif character_number==11:
+        messagebox.showinfo("궁극기","고화검 · 재우유홍")
+    elif character_number==12:
+        messagebox.showinfo("궁극기","별의 운명")
+    elif character_number==13:
+        if tartalia_mode=="bow":
+            messagebox.showinfo("궁극기(활)","극악기")
+        else:
+            messagebox.showinfo("궁극기(마왕무기)","진멸섬")
+    elif character_number==19:
+        messagebox.showinfo("궁극기","장미의 뇌광")
+    elif character_number==20:
+        messagebox.showinfo("궁극기","물의 노래")
+
+def char_passive1_name(event):
+    if character_number==10:
+        messagebox.showinfo("잠재 특성","광휘의 계절")
+    elif character_number==11:
+        messagebox.showinfo("잠재 특성","물 창조의 비결")
+    elif character_number==12:
+        messagebox.showinfo("잠재 특성","「할망구, 나 잡아 봐라!」")
+    elif character_number==13:
+        messagebox.showinfo("잠재 특성","존재하지 않는 커튼콜")
+    elif character_number==19:
+        messagebox.showinfo("잠재 특성","인덕턴스 여진")
+    elif character_number==20:
+        messagebox.showinfo("잠재 특성","물의 노래")
+
+def char_passive2_name(event):
+    if character_number==10:
+        messagebox.showinfo("잠재 특성","앵콜")
+    elif character_number==11:
+        messagebox.showinfo("잠재 특성","허와 실")
+    elif character_number==12:
+        messagebox.showinfo("잠재 특성","「운명에 맡겨!」")
+    elif character_number==13:
+        messagebox.showinfo("잠재 특성","수형검")
+    elif character_number==19:
+        messagebox.showinfo("잠재 특성","정전기 역장")
+    elif character_number==20:
+        messagebox.showinfo("잠재 특성","물의 노래")
+
+def char_passive3_name(event):
+    if character_number==10:
+        messagebox.showinfo("잠재 특성","정성♪듬뿍")
+    elif character_number==11:
+        messagebox.showinfo("잠재 특성","번뜩이는 영감")
+    elif character_number==12:
+        messagebox.showinfo("잠재 특성","운행 원리")
+    elif character_number==13:
+        messagebox.showinfo("잠재 특성","무예마스터리")
+    elif character_number==19:
+        messagebox.showinfo("잠재 특성","포션 통찰")
+    elif character_number==20:
+        messagebox.showinfo("잠재 특성","물의 노래")
 
 #물 속성 정보 함수
 def babara_info(page=1):
@@ -355,7 +453,12 @@ def babara_info(page=1):
             character_ult_image.configure(image=babara_ult_image)
             character_ult_text.configure(fg="dodgerblue3", font=("Comic Sans MS", 26), bg="light steel blue", text="주위 아군 및 자신의 파티원 전원이 회복됩니다")
         else:
-            working(1)
+            character_passive1_image.configure(image=babara_passive1_image)
+            character_passive1_text.configure(text="공연, 시작♪으로 노래의 고리를 부여받은 동안 현제 캐릭터의 스테미너 소모량을 12% 감소시킵니다")
+            character_passive2_image.configure(image=babara_passive2_image)
+            character_passive2_text.configure(text="원소 구슬 혹은 원소 입자 휙득 시 \n공연, 시작♪의 노래의 고리 지속 시간이 1초 증가하며 1회 시전마다 최대 5회 증가가 가능합니다\n휙득은 바바라가 아니어도 되며 물 원소가 아니어도 됩니다")
+            character_passive3_image.configure(image=passive3_cooking)
+            character_passive3_text.configure(text="바바라를 선택하고 회복류 요리를 완벽히 조리 시 12%로 2개를 얻습니다")
     else:
         working()
 
@@ -378,7 +481,12 @@ def hangchu_info(page=1):
             character_ult_image.configure(image=hangchu_ult_image)
             character_ult_text.configure(fg="dodgerblue3", font=("Comic Sans MS", 16), bg="light steel blue", text="우렴검의 수가 최대치로 유지되게 되며 일반공격 시행마다 홍검세가 물원소 피해를 같이 가합니다.\n이 효과들은 캐릭터를 전환해도 유지됩니다")
         else:
-            working()
+            character_passive1_image.configure(image=hangchu_passive1_image)
+            character_passive1_text.configure(text="우렴검이 소모되거나 지속시간이 만료될 경우 현제 캐릭터를 행추 최대체력의 6%만큼 치유합니다")
+            character_passive2_image.configure(image=hangchu_passive2_image)
+            character_passive2_text.configure(text="행추의 물 원소 피해 보너스가 20%p 증가합니다(성유물과 합연산합니다)")
+            character_passive3_image.configure(image=passive3_ability_ingr_reduce)
+            character_passive3_text.configure(text="행추를 선택하고 캐릭터 특성 소재 합성 시 25%의 확률로 일부 합성 재료를 반환합니다")
     else:
         working()
 
@@ -401,7 +509,12 @@ def mona_info(page=1):
             character_ult_image.configure(image=mona_ult_image)
             character_ult_text.configure(fg="dodgerblue3", font=("Comic Sans MS", 16), bg="light steel blue", text="주위적을 포영,성이, 습기 상태로 만듭니다. 포영 상태의 적 공격 시 추가 물 원소 피해를 가합니다\n 성이상태의 적은 받는 피해가 증가하고 약한 적은 구속당해 아무것도 못하게 합니다")
         else:
-            working()
+            character_passive1_image.configure(image=mona_passive1_image)
+            character_passive1_text.configure(text="흐르는 허와 실을 적 주위에서 연속해서 2초간 있고서 전투 상태라면 현 위치에 허영을 설치합니다\n전투 상태가 아니라면 전투 상태가 되는 즉시 설치되며 허영의 기능은 동일합니다\n단, 이 허영은 2초간만 지속되며 파열피해량은 본래의 50%입니다")
+            character_passive2_image.configure(image=mona_passive2_image)
+            character_passive2_text.configure(text="성유물을 포함한 최종 원소충전효율의 배율의 0.2만큼 물 원소 피해 보너스가 증가합니다\n예를 들어 원소 충전효율이 150%라면 150*0.2=30%만큼 증가합니다\n이 증가는 성유물과 합연산 됩니다")
+            character_passive3_image.configure(image=passive3_weapon_ingr_reduce)
+            character_passive3_text.configure(text="바바라를 선택하고 무기 돌파 소재 합성 시 25%의 확률로 일부 합성 재료를 반환합니다")
     else:
         working()
 
@@ -441,7 +554,12 @@ def tartalia_info(page=1):
                 character_ult_text.configure(fg="dodgerblue3", font=("Comic Sans MS", 16), bg="light steel blue", text="근처의 적 전원에게 물 원소 피해를 가합니다.\n 이 공격이 단류상태의 적 적중 시 단류를 제거하고 범위 물 원소 피해(원소폭발)를 가합니다")
             character_ult_image.configure(image=tartalia_ult_image)
         else:
-            working()
+            character_passive1_image.configure(image=tartalia_passive1_image)
+            character_passive1_text.configure(text="단류의 지속시간이 8초 증가합니다")
+            character_passive2_image.configure(image=tartalia_passive2_image)
+            character_passive2_text.configure(text="마왕무장(한손검)로 치명타 발생 시 치명타를 맞은 적에게 18초간 지속되는 단류를 부여합니다\n이 지속시간은 존재하지 않는 커튼콜을 적용한 수치 입니다")
+            character_passive3_image.configure(image=tartalia_passive3_image)
+            character_passive3_text.configure(text="자신의 파티 전원의 일반공격 스킬의 레벨이 1 증가합니다")
     else:
         working()
 
@@ -459,13 +577,18 @@ def lisa_info(page=1): #틀만 옮긴 상태임
         if page==1:
             charcater_info_place()
             character_weapon_image.configure(image=orb)
-            character_weapon_text.configure(text="주기가 4회인 물 원소 공격을 합니다\n강공격:짧은 영창 후 범위 물 원소피해를 가합니다\n낙하공격:착지 시 범위 내 적에게 물 원소 피해를 가합니다", fg="dodgerblue3", font=("Comic Sans MS", 18), bg="light steel blue")
-            character_skill_image.configure(image=babara_skill_image)
+            character_weapon_text.configure(text="주기가 4회인 번개 원소 공격을 합니다\n강공격:짧은 영창 후 범위 번개 원소피해를 가합니다\n낙하공격:착지 시 범위 내 적에게 번개 원소 피해를 가합니다", fg="dodgerblue3", font=("Comic Sans MS", 18), bg="light steel blue")
+            character_skill_image.configure(image=lisa_skill_image)
             character_skill_text.configure(text="자신에게 노래의 고리를 부여하고 주위의 적에게 물 원소 피해를 가합니다.\n노래의 고리는 캐릭터를 전환해도 유지됩니다.\n노래의 고리를 가진 동안 바바라의 공격(강공격은 4배)이 명중 시 파티원 전원을 치유합니다\n노래의 고리가 있는 동안 주기적으로 현제 캐릭터를 치유하며 현제캐릭터와 주위의 적에게 습기를 부여합니다", fg="dodgerblue3", font=("Comic Sans MS", 12), bg="light steel blue")
             character_ult_image.configure(image=babara_ult_image)
             character_ult_text.configure(fg="dodgerblue3", font=("Comic Sans MS", 26), bg="light steel blue", text="주위 아군 및 자신의 파티원 전원이 회복됩니다")
         else:
-            working()#여긴 이제 패시브들 그리고 운명의 자리를 채울 공간
+            character_passive1_image.configure(image=babara_passive1_image)
+            character_passive1_text.configure(text="공연, 시작♪으로 노래의 고리를 부여받은 동안 현제 캐릭터의 스테미너 소모량을 12% 감소시킵니다")
+            character_passive2_image.configure(image=babara_passive2_image)
+            character_passive2_text.configure(text="원소 구슬 혹은 원소 입자 휙득 시 공연, 시작♪의 노래의 고리 지속 시간이 1초 증가하며 1회 시전마다 최대 5회 증가가 가능합니다\n휙득은 바바라가 아니어도 되며 물 원소가 아니어도 됩니다")
+            character_passive3_image.configure(image=passive3_cooking)
+            character_passive3_text.configure(text="바바라를 선택하고 회복류 요리를 완벽히 조리 시 12%로 2개를 얻습니다")
     else:
         working()
 
@@ -563,7 +686,7 @@ def pageprevious(current_mode):
         lisa_info(1)
 
 def star1():
-    working()
+    destinystar.star1(10, character_star)
 
 def star2():
     working()
@@ -759,9 +882,9 @@ broadsword=PhotoImage(file="C:/과일맛 고기/2021/레몬맛고기/[05]개인�
 bow=PhotoImage(file="C:/과일맛 고기/2021/레몬맛고기/[05]개인적인 프로젝트/gid/genshin-impact-dictionary/gid/skill icon/weapon/bow.png")
 
 #3번째 특성(요리증가, 재련제료 반환 등등)
-cooking=PhotoImage(file="C:/과일맛 고기/2021/레몬맛고기/[05]개인적인 프로젝트/gid/genshin-impact-dictionary/gid/skill icon/passive3/cook.png")
-ability_ingr_reduce=PhotoImage(file="C:/과일맛 고기/2021/레몬맛고기/[05]개인적인 프로젝트/gid/genshin-impact-dictionary/gid/skill icon/passive3/ability_reduce.png")
-weapon_ingr_reduce=PhotoImage(file="C:/과일맛 고기/2021/레몬맛고기/[05]개인적인 프로젝트/gid/genshin-impact-dictionary/gid/skill icon/passive3/weapon_reduce.png")
+passive3_cooking=PhotoImage(file="C:/과일맛 고기/2021/레몬맛고기/[05]개인적인 프로젝트/gid/genshin-impact-dictionary/gid/skill icon/passive3/cook.png")
+passive3_ability_ingr_reduce=PhotoImage(file="C:/과일맛 고기/2021/레몬맛고기/[05]개인적인 프로젝트/gid/genshin-impact-dictionary/gid/skill icon/passive3/ability_reduce.png")
+passive3_weapon_ingr_reduce=PhotoImage(file="C:/과일맛 고기/2021/레몬맛고기/[05]개인적인 프로젝트/gid/genshin-impact-dictionary/gid/skill icon/passive3/weapon_reduce.png")
 
 #바바라 이미지
 babara_skill_image=PhotoImage(file="C:/과일맛 고기/2021/레몬맛고기/[05]개인적인 프로젝트/gid/genshin-impact-dictionary/gid/skill icon/barbara/skill.png")
@@ -788,6 +911,8 @@ tartalia_passive1_image=PhotoImage(file="C:/과일맛 고기/2021/레몬맛고�
 tartalia_passive2_image=PhotoImage(file="C:/과일맛 고기/2021/레몬맛고기/[05]개인적인 프로젝트/gid/genshin-impact-dictionary/gid/skill icon/childe/passive2.png")
 tartalia_passive3_image=PhotoImage(file="C:/과일맛 고기/2021/레몬맛고기/[05]개인적인 프로젝트/gid/genshin-impact-dictionary/gid/skill icon/childe/passive3.png")
 
+#리사
+
 
 character_image=Label(window, image=tartalia)
 character_name=Label(window, text="타르탈리아", fg="dodgerblue3", font=("Comic Sans MS",40), bg="light steel blue")
@@ -799,10 +924,13 @@ character_weapon=Label(window, text="활", fg="dodgerblue3", font=("Comic Sans M
 
 #1페이지(데폴트-타르탈리아.기본상태)
 character_weapon_image=Label(window, image=bow)
+character_weapon_image.bind("<Button>", char_weapon_name)
 character_weapon_text=Label(window, text="주기가 6회인 공격을 합니다\n강공격:조준하여 피해량이 더 큰공격을 합니다. \n최대차징 시 물 원소 피해를 주며 단류를 부여합니다\n낙하공격:착지 시 범위 내 적에게 물 원소 피해를 가합니다", fg="dodgerblue3", font=("Comic Sans MS", 18), bg="light steel blue")
 character_skill_image=Label(window, image=tartalia_skill_image)
+character_skill_image.bind("<Button>", char_skill_name)
 character_skill_text=Label(window, text="주위 적에게 물 원소 피해를 주고 자신의 무장을 마왕무장(한손검)으로 전환합니다\n단류 섬:활 상태에서 풀차징으로 단류 상태의 적 공격 시 그 적 중심으로 3회 범위 물 원소 피해(일반공격)를 가합니다\n단류 파:단류상태인 적을 처치 시 주위 적에게 물 원소 피해(일반공격)를 가하며 단류효과를 부여합니다", fg="dodgerblue3", font=("Comic Sans MS", 12), bg="light steel blue")
 character_ult_image=Label(window, image=tartalia_ult_image)
+character_ult_image.bind("<Button>", char_ult_name)
 character_ult_text=Label(window, fg="dodgerblue3", font=("Comic Sans MS", 26), bg="light steel blue", text="전방을 향해 범위 물 원소 피해를 가하며 단류상태를 부여하며 원소에너지를 33%반환합니다")
 character_weapon_multiply_frame=Label(window, text="무기 테두리", bg="light steel blue", fg="dodgerblue3", font=("Comic Sans MS",18))
 character_weapon_multiply=Label(window, text="무기내용", bg="light steel blue", fg="dodgerblue3", font=("Comic Sans MS",18))
@@ -815,10 +943,13 @@ character_ult_multiply=Label(window, text="궁 내용", bg="light steel blue", f
 character_ult_level=Button(window, text="미설정", command=info_ult_level_button_ver, width=8, height=2)
 #2페이지
 character_passive1_image=Label(window, image=tartalia_passive1_image)
+character_passive1_image.bind("<Button>", char_passive1_name)
 character_passive1_text=Label(window, text="패시브 특성1호", fg="dodgerblue3", font=("Comic Sans MS",11), bg="light steel blue")
 character_passive2_image=Label(window, image=tartalia_passive2_image)
+character_passive2_image.bind("<Button>", char_passive2_name)
 character_passive2_text=Label(window, text="패시브 특성2호", fg="dodgerblue3", font=("Comic Sans MS",11), bg="light steel blue")
 character_passive3_image=Label(window, image=tartalia_passive3_image)
+character_passive3_image.bind("<Button>", char_passive3_name)
 character_passive3_text=Label(window, text="패시브 특성3호", fg="dodgerblue3", font=("Comic Sans MS",18), bg="light steel blue")
 character_star1=Button(window, text=1, command=star1, width=19, height=2)
 character_star2=Button(window, text=2, command=star2, width=19, height=2)
@@ -826,7 +957,7 @@ character_star3=Button(window, text=3, command=star3, width=19, height=2)
 character_star4=Button(window, text=4, command=star4, width=19, height=2)
 character_star5=Button(window, text=5, command=star5, width=19, height=2)
 character_star6=Button(window, text=6, command=star6, width=19, height=2)
-character_star=Label(window, bg="light steel blue", fg="dodgerblue3", font=("Comic Sans MS",12), text="운명의 자리")
+character_star=Label(window, bg="light steel blue", fg="dodgerblue3", font=("Comic Sans MS",18), text="운명의 자리")
 
 
 #타르탈리아용 버튼
