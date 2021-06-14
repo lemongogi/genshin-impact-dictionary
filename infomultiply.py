@@ -14,8 +14,8 @@ def reposition(x_pos, frame_y, content_y, multiply, multiply_frame):
 
 def info_weapon_level2(character_number, weapon_level, multiply, multiply_frame, tartalia_mode="", skill_level=0):
     if character_number==10: #바바라
-        multiply_frame.configure(text="    [1단/2단/3단/4단]  [강공격]    [낙하공격(저공/고공)]", font=("Comic Sans MS", 12))
-        multiply.configure(font=("Comic Sans MS",10))
+        multiply_frame.configure(text="    [1단/2단/3단/4단]  [강공격]    [낙하공격(저공/고공)]", font=("Comic Sans MS", 12), fg="dodgerblue3")
+        multiply.configure(font=("Comic Sans MS",10), fg="dodgerblue3")
         if weapon_level==1:
             multiply.configure(text="[37.8% / 35.5% / 41.0% / 55.2%]   [166%]   [114% / 142%]")
         elif weapon_level==2:
@@ -122,7 +122,6 @@ def info_weapon_level2(character_number, weapon_level, multiply, multiply_frame,
             not_written(multiply)
 
     elif character_number==13: #타르탈리아
-
         multiply.configure(font=("Comic Sans MS",10))
         if tartalia_mode=="bow":
             multiply_frame.configure(text="[1단/2단/3단/4단/5단/6단] [조준공격/풀차징] [단류섬] [단류파] [단류지속] [낙하공격(저공/고공)]", font=("Comic Sans MS", 10))

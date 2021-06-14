@@ -454,11 +454,11 @@ def babara_info(page=1):
             character_ult_text.configure(fg="dodgerblue3", font=("Comic Sans MS", 26), bg="light steel blue", text="주위 아군 및 자신의 파티원 전원이 회복됩니다")
         else:
             character_passive1_image.configure(image=babara_passive1_image)
-            character_passive1_text.configure(text="공연, 시작♪으로 노래의 고리를 부여받은 동안 현제 캐릭터의 스테미너 소모량을 12% 감소시킵니다")
+            character_passive1_text.configure(text="공연, 시작♪으로 노래의 고리를 부여받은 동안 현제 캐릭터의 스테미너 소모량을 12% 감소시킵니다", fg="dodgerblue3", font=("Comic Sans MS",11))
             character_passive2_image.configure(image=babara_passive2_image)
-            character_passive2_text.configure(text="원소 구슬 혹은 원소 입자 휙득 시 \n공연, 시작♪의 노래의 고리 지속 시간이 1초 증가하며 1회 시전마다 최대 5회 증가가 가능합니다\n휙득은 바바라가 아니어도 되며 물 원소가 아니어도 됩니다")
+            character_passive2_text.configure(text="원소 구슬 혹은 원소 입자 휙득 시 \n공연, 시작♪의 노래의 고리 지속 시간이 1초 증가하며 1회 시전마다 최대 5회 증가가 가능합니다\n휙득은 바바라가 아니어도 되며 물 원소가 아니어도 됩니다", fg="dodgerblue3", font=("Comic Sans MS",11))
             character_passive3_image.configure(image=passive3_cooking)
-            character_passive3_text.configure(text="바바라를 선택하고 회복류 요리를 완벽히 조리 시 12%로 2개를 얻습니다")
+            character_passive3_text.configure(text="바바라를 선택하고 회복류 요리를 완벽히 조리 시 12%로 2개를 얻습니다", fg="dodgerblue3", font=("Comic Sans MS",11))
     else:
         working()
 
@@ -482,11 +482,11 @@ def hangchu_info(page=1):
             character_ult_text.configure(fg="dodgerblue3", font=("Comic Sans MS", 16), bg="light steel blue", text="우렴검의 수가 최대치로 유지되게 되며 일반공격 시행마다 홍검세가 물원소 피해를 같이 가합니다.\n이 효과들은 캐릭터를 전환해도 유지됩니다")
         else:
             character_passive1_image.configure(image=hangchu_passive1_image)
-            character_passive1_text.configure(text="우렴검이 소모되거나 지속시간이 만료될 경우 현제 캐릭터를 행추 최대체력의 6%만큼 치유합니다")
+            character_passive1_text.configure(text="우렴검이 소모되거나 지속시간이 만료될 경우 현제 캐릭터를 행추 최대체력의 6%만큼 치유합니다", fg="dodgerblue3", font=("Comic Sans MS",11))
             character_passive2_image.configure(image=hangchu_passive2_image)
-            character_passive2_text.configure(text="행추의 물 원소 피해 보너스가 20%p 증가합니다(성유물과 합연산합니다)")
+            character_passive2_text.configure(text="행추의 물 원소 피해 보너스가 20%p 증가합니다(성유물과 합연산합니다)", fg="dodgerblue3", font=("Comic Sans MS",11))
             character_passive3_image.configure(image=passive3_ability_ingr_reduce)
-            character_passive3_text.configure(text="행추를 선택하고 캐릭터 특성 소재 합성 시 25%의 확률로 일부 합성 재료를 반환합니다")
+            character_passive3_text.configure(text="행추를 선택하고 캐릭터 특성 소재 합성 시 25%의 확률로 일부 합성 재료를 반환합니다", fg="dodgerblue3", font=("Comic Sans MS",11))
     else:
         working()
 
@@ -510,11 +510,11 @@ def mona_info(page=1):
             character_ult_text.configure(fg="dodgerblue3", font=("Comic Sans MS", 16), bg="light steel blue", text="주위적을 포영,성이, 습기 상태로 만듭니다. 포영 상태의 적 공격 시 추가 물 원소 피해를 가합니다\n 성이상태의 적은 받는 피해가 증가하고 약한 적은 구속당해 아무것도 못하게 합니다")
         else:
             character_passive1_image.configure(image=mona_passive1_image)
-            character_passive1_text.configure(text="흐르는 허와 실을 적 주위에서 연속해서 2초간 있고서 전투 상태라면 현 위치에 허영을 설치합니다\n전투 상태가 아니라면 전투 상태가 되는 즉시 설치되며 허영의 기능은 동일합니다\n단, 이 허영은 2초간만 지속되며 파열피해량은 본래의 50%입니다")
+            character_passive1_text.configure(text="흐르는 허와 실을 적 주위에서 연속해서 2초간 있고서 전투 상태라면 현 위치에 허영을 설치합니다\n전투 상태가 아니라면 전투 상태가 되는 즉시 설치되며 허영의 기능은 동일합니다\n단, 이 허영은 2초간만 지속되며 파열피해량은 본래의 50%입니다", fg="dodgerblue3", font=("Comic Sans MS",11))
             character_passive2_image.configure(image=mona_passive2_image)
-            character_passive2_text.configure(text="성유물을 포함한 최종 원소충전효율의 배율의 0.2만큼 물 원소 피해 보너스가 증가합니다\n예를 들어 원소 충전효율이 150%라면 150*0.2=30%만큼 증가합니다\n이 증가는 성유물과 합연산 됩니다")
+            character_passive2_text.configure(text="성유물을 포함한 최종 원소충전효율의 배율의 0.2만큼 물 원소 피해 보너스가 증가합니다\n예를 들어 원소 충전효율이 150%라면 150*0.2=30%만큼 증가합니다\n이 증가는 성유물과 합연산 됩니다", fg="dodgerblue3", font=("Comic Sans MS",11))
             character_passive3_image.configure(image=passive3_weapon_ingr_reduce)
-            character_passive3_text.configure(text="바바라를 선택하고 무기 돌파 소재 합성 시 25%의 확률로 일부 합성 재료를 반환합니다")
+            character_passive3_text.configure(text="바바라를 선택하고 무기 돌파 소재 합성 시 25%의 확률로 일부 합성 재료를 반환합니다", fg="dodgerblue3", font=("Comic Sans MS",11))
     else:
         working()
 
@@ -555,40 +555,40 @@ def tartalia_info(page=1):
             character_ult_image.configure(image=tartalia_ult_image)
         else:
             character_passive1_image.configure(image=tartalia_passive1_image)
-            character_passive1_text.configure(text="단류의 지속시간이 8초 증가합니다")
+            character_passive1_text.configure(text="단류의 지속시간이 8초 증가합니다", fg="dodgerblue3", font=("Comic Sans MS",11))
             character_passive2_image.configure(image=tartalia_passive2_image)
-            character_passive2_text.configure(text="마왕무장(한손검)로 치명타 발생 시 치명타를 맞은 적에게 18초간 지속되는 단류를 부여합니다\n이 지속시간은 존재하지 않는 커튼콜을 적용한 수치 입니다")
+            character_passive2_text.configure(text="마왕무장(한손검)로 치명타 발생 시 치명타를 맞은 적에게 18초간 지속되는 단류를 부여합니다\n이 지속시간은 존재하지 않는 커튼콜을 적용한 수치 입니다", fg="dodgerblue3", font=("Comic Sans MS",11))
             character_passive3_image.configure(image=tartalia_passive3_image)
-            character_passive3_text.configure(text="자신의 파티 전원의 일반공격 스킬의 레벨이 1 증가합니다")
+            character_passive3_text.configure(text="자신의 파티 전원의 일반공격 스킬의 레벨이 1 증가합니다", fg="dodgerblue3", font=("Comic Sans MS",11))
     else:
         working()
 
 #전기 속성 정보 함수
-def lisa_info(page=1): #틀만 옮긴 상태임
+def lisa_info(page=1):
     global character_image, character_name, character_eletype, character_weapon, babara, infostat, character_number, character_weapon_image, character_weapon_text, character_skill_image, character_skill_text, character_ult_image, character_ult_text, current_mode
     current_mode="info_lisa"
-    character_number=10
+    character_number=19
     if infostat==1:
-        water_forget()
-        character_image.configure(image=babara)
-        character_name.configure(text="바바라", fg="dodgerblue3", font=("Comic Sans MS",40), bg="light steel blue")
-        character_eletype.configure(text="물속성", fg="dodgerblue3", font=("Comic Sans MS", 40), bg="light steel blue")
-        character_weapon.configure(text="법구", fg="dodgerblue3", font=("Comic Sans MS", 40), bg="light steel blue")
+        lightening_forget()
+        character_image.configure(image=lisa)
+        character_name.configure(text="리사", fg="slateblue2", font=("Comic Sans MS",40), bg="light steel blue")
+        character_eletype.configure(text="번개속성", fg="slateblue2", font=("Comic Sans MS", 40), bg="light steel blue")
+        character_weapon.configure(text="법구", fg="slateblue2", font=("Comic Sans MS", 40), bg="light steel blue")
+        charcater_info_place(page)
         if page==1:
-            charcater_info_place()
             character_weapon_image.configure(image=orb)
-            character_weapon_text.configure(text="주기가 4회인 번개 원소 공격을 합니다\n강공격:짧은 영창 후 범위 번개 원소피해를 가합니다\n낙하공격:착지 시 범위 내 적에게 번개 원소 피해를 가합니다", fg="dodgerblue3", font=("Comic Sans MS", 18), bg="light steel blue")
+            character_weapon_text.configure(text="주기가 4회인 번개 원소 공격을 합니다\n강공격:짧은 영창 후 범위 번개 원소피해를 가합니다\n낙하공격:착지 시 범위 내 적에게 번개 원소 피해를 가합니다", fg="slateblue2", font=("Comic Sans MS", 18), bg="light steel blue")
             character_skill_image.configure(image=lisa_skill_image)
-            character_skill_text.configure(text="자신에게 노래의 고리를 부여하고 주위의 적에게 물 원소 피해를 가합니다.\n노래의 고리는 캐릭터를 전환해도 유지됩니다.\n노래의 고리를 가진 동안 바바라의 공격(강공격은 4배)이 명중 시 파티원 전원을 치유합니다\n노래의 고리가 있는 동안 주기적으로 현제 캐릭터를 치유하며 현제캐릭터와 주위의 적에게 습기를 부여합니다", fg="dodgerblue3", font=("Comic Sans MS", 12), bg="light steel blue")
-            character_ult_image.configure(image=babara_ult_image)
-            character_ult_text.configure(fg="dodgerblue3", font=("Comic Sans MS", 26), bg="light steel blue", text="주위 아군 및 자신의 파티원 전원이 회복됩니다")
+            character_skill_text.configure(text="가장 가까운 적을 추적하는 구체를 발사합니다. 이 구체를 맞은 적에게 번개 원소 피해를 가하며 전기 전도 1중첩을 부여합니다\n또한, 이 스킬로 일으킨 번개 원소 피해가 아닌 원소반응을 맞은 적에게 1중첩 추가부여 합니다\n홀드 시전:주위 모든 적에게 번개 원소 피해를 가합니다. 대상이 전기 전도 중첩을 가진 상태라면 중첩에 따라 피해량이 증가하며 중첩이 제거됩니다", fg="slateblue2", font=("Comic Sans MS", 10), bg="light steel blue")
+            character_ult_image.configure(image=lisa_ult_image)
+            character_ult_text.configure(fg="slateblue2", font=("Comic Sans MS", 15), bg="light steel blue", text="즉시 주위 적 전원에게 번개 원소 피해를 가하며 밀칩니다.\n그리고 자신의 위치에 주위 적에게 주기적으로 번개 원소 피해를 가하는 장미의 뇌광을 설치합니다\n시전 시 공격과 장미의 뇌광 공격 1회의 피해량은 같습니다")
         else:
-            character_passive1_image.configure(image=babara_passive1_image)
-            character_passive1_text.configure(text="공연, 시작♪으로 노래의 고리를 부여받은 동안 현제 캐릭터의 스테미너 소모량을 12% 감소시킵니다")
-            character_passive2_image.configure(image=babara_passive2_image)
-            character_passive2_text.configure(text="원소 구슬 혹은 원소 입자 휙득 시 공연, 시작♪의 노래의 고리 지속 시간이 1초 증가하며 1회 시전마다 최대 5회 증가가 가능합니다\n휙득은 바바라가 아니어도 되며 물 원소가 아니어도 됩니다")
-            character_passive3_image.configure(image=passive3_cooking)
-            character_passive3_text.configure(text="바바라를 선택하고 회복류 요리를 완벽히 조리 시 12%로 2개를 얻습니다")
+            character_passive1_image.configure(image=lisa_passive1_image)
+            character_passive1_text.configure(text="강공격을 맞춘 적에게도 전기 전도를 1중첩 부여하며 이는 창뢰와 연동됩니다", fg="slateblue2", font=("Comic Sans MS",11))
+            character_passive2_image.configure(image=lisa_passive2_image)
+            character_passive2_text.configure(text="장미의 뇌광을 맞은 적은 10초간 방어력이 15%감소합니다", fg="slateblue2", font=("Comic Sans MS",11))
+            character_passive3_image.configure(image=passive3_potion_ingr_reduce)
+            character_passive3_text.configure(text="바바라를 선택하고 포션 합성 시 20%의 확률로 일부 합성 재료를 반환합니다", fg="slateblue2", font=("Comic Sans MS",11))
     else:
         working()
 
@@ -876,6 +876,7 @@ lumine_rock_dis=Button(window, image=lumine, command=working)
 skill_level=ult_level=int(1)
 
 #물=dodgerblue3
+#번개=slateblue2
 #무기 이미지
 orb=PhotoImage(file="C:/과일맛 고기/2021/레몬맛고기/[05]개인적인 프로젝트/gid/genshin-impact-dictionary/gid/skill icon/weapon/orb.png")
 broadsword=PhotoImage(file="C:/과일맛 고기/2021/레몬맛고기/[05]개인적인 프로젝트/gid/genshin-impact-dictionary/gid/skill icon/weapon/broadsword.png")
@@ -885,6 +886,7 @@ bow=PhotoImage(file="C:/과일맛 고기/2021/레몬맛고기/[05]개인적인 �
 passive3_cooking=PhotoImage(file="C:/과일맛 고기/2021/레몬맛고기/[05]개인적인 프로젝트/gid/genshin-impact-dictionary/gid/skill icon/passive3/cook.png")
 passive3_ability_ingr_reduce=PhotoImage(file="C:/과일맛 고기/2021/레몬맛고기/[05]개인적인 프로젝트/gid/genshin-impact-dictionary/gid/skill icon/passive3/ability_reduce.png")
 passive3_weapon_ingr_reduce=PhotoImage(file="C:/과일맛 고기/2021/레몬맛고기/[05]개인적인 프로젝트/gid/genshin-impact-dictionary/gid/skill icon/passive3/weapon_reduce.png")
+passive3_potion_ingr_reduce=PhotoImage(file="C:/과일맛 고기/2021/레몬맛고기/[05]개인적인 프로젝트/gid/genshin-impact-dictionary/gid/skill icon/passive3/potion_reduce.png")
 
 #바바라 이미지
 babara_skill_image=PhotoImage(file="C:/과일맛 고기/2021/레몬맛고기/[05]개인적인 프로젝트/gid/genshin-impact-dictionary/gid/skill icon/barbara/skill.png")
@@ -912,6 +914,10 @@ tartalia_passive2_image=PhotoImage(file="C:/과일맛 고기/2021/레몬맛고�
 tartalia_passive3_image=PhotoImage(file="C:/과일맛 고기/2021/레몬맛고기/[05]개인적인 프로젝트/gid/genshin-impact-dictionary/gid/skill icon/childe/passive3.png")
 
 #리사
+lisa_skill_image=PhotoImage(file="C:/과일맛 고기/2021/레몬맛고기/[05]개인적인 프로젝트/gid/genshin-impact-dictionary/gid/skill icon/lisa/skill.png")
+lisa_ult_image=PhotoImage(file="C:/과일맛 고기/2021/레몬맛고기/[05]개인적인 프로젝트/gid/genshin-impact-dictionary/gid/skill icon/lisa/ult.png")
+lisa_passive1_image=PhotoImage(file="C:/과일맛 고기/2021/레몬맛고기/[05]개인적인 프로젝트/gid/genshin-impact-dictionary/gid/skill icon/lisa/passive1.png")
+lisa_passive2_image=PhotoImage(file="C:/과일맛 고기/2021/레몬맛고기/[05]개인적인 프로젝트/gid/genshin-impact-dictionary/gid/skill icon/lisa/passive2.png")
 
 
 character_image=Label(window, image=tartalia)
