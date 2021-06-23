@@ -520,7 +520,7 @@ def mona_info(page=1):
             character_passive2_image.configure(image=mona_passive2_image)
             character_passive2_text.configure(text="성유물을 포함한 최종 원소충전효율의 배율의 0.2만큼 물 원소 피해 보너스가 증가합니다\n예를 들어 원소 충전효율이 150%라면 150*0.2=30%만큼 증가합니다\n이 증가는 성유물과 합연산 됩니다", fg="dodgerblue3", font=("Comic Sans MS",11))
             character_passive3_image.configure(image=passive3_weapon_ingr_reduce)
-            character_passive3_text.configure(text="바바라를 선택하고 무기 돌파 소재 합성 시 25%의 확률로 일부 합성 재료를 반환합니다", fg="dodgerblue3", font=("Comic Sans MS",11))
+            character_passive3_text.configure(text="모나를 선택하고 무기 돌파 소재 합성 시 25%의 확률로 일부 합성 재료를 반환합니다", fg="dodgerblue3", font=("Comic Sans MS",11))
     else:
         working()
 
@@ -692,7 +692,8 @@ def pageprevious(current_mode):
         lisa_info(1)
 
 def star1():
-    destinystar.star1(10, character_star)
+    global character_number
+    destinystar.star1(character_number, character_star)
 
 def star2():
     working()
